@@ -1,0 +1,76 @@
+:root{
+    --bg:#090d1f;
+    --card-bg:#131b3a;
+    --text:#f1f5f9;
+    --text-muted:#94a3b8;
+    --accent: #a855f7;
+    --accente-blue: #38bdf8;
+}
+
+body.light-mode{
+    --bg:#f3f0ff;
+    --card-bg:#ffffff;
+    --text:#1e1b4b;
+    --text-muted:#4c1d95;
+    --accent: #7c3aed;
+    --accente-blue: #0284c7;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, sans-serif; }
+
+body{
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s, color 0.3s;
+    padding: 2rem;
+}
+
+.navbar {display: flex; justify-content: space-between; align-items: center; margin:3rem; }
+.logo {font-weight: bold; font-size: 1.3rem ; color: var(--accent);}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--text);
+    font-weight: 600;
+}
+
+.hero { text-align: center; margin-bottom: 4rem;}
+.destaque {color: var(--accent);}
+.cursor { animation: psicar 0.8s infinite;}
+@keyframes piscar { 50% {opacity: 0;}}
+
+.filtros { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1.5rem 0;}
+.filtro-btn.ativo {background:var(--accent); color: #fff;}
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0,.15);
+    transition: transform 0.2s;
+}
+
+.card:hover {transform :translateY(-5px);}
+.tags {display: flex; gap: 0.4rem; flex-wrap: wrap; margin: 1rem 0;}
+.tag {font-size: 0.75rem; background: rgba(244, 63, 94, 0.15); color: var(--accent); padding: 0.2rem 0.6rem; border-radius: 99px;}
+
+.modal-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center; align-items: center;
+}
+
+.modal-overlay.aberto {display: flex;}
+.modal-conteudo {background: var(--card-bg); padding: 2rem; border-radius: 12px;max-width: 450px; width: 90%; position: relative;}
+.fechar-modal {position:absolute; top:10px; right: 15px; font-size: 1.5rem; background: none; }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sara Roma | Portifólio Dev</title>
+    <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <span class="logo"></span>
+        <button id="theme-toggle" aria-label="Alternar tema"🌙 Modo Escuro</button>
+    </header>
+    
+    <section class="hero">
+        <h1>Olá,eu sou <span class="destaque"> Sara Roma </span></h1>
+        <p class="texto-dinamico">
+  Eu sou <span id="typewriter"></span><span class="cursor">|</span></p>
+        <p class="descricao">Sou uma desenvolvedora apaixonada por criar soluções inovadoras e eficientes. Com habilidades em diversas tecnologias, estou sempre em busca de novos desafios para aprimorar minhas habilidades e contribuir para projetos significativos.</p>
+    </section>
+
+    <section class="projetos-section">
+        <h2>Meus Projetos </h2>
+
+        <div class="filtros" id="filtros-container">
+            <button class="filtro-btn ativo" data-filter="todos">Todos</button>
+            <button class="filtro-btn" data-filter="Nodes.js">Nodes.js</button>
+            <button class="filtro-btn" data-filter="Python">Python</button>
+            <button class="filtro-btn" data-filter="C">CSS</button>
+            <button class="filtro-btn" data-filter="JavaScript">JavaScript</button>
+
+        </div>
+
+        <div class="grid-projetos" id="grid-projetos"></div>
+    </section>
+
+    <div class="modal-overlay" id="modal">
+        <div class="modal-conteudo">
+            <button class="fechar-modal" id="fechar-modal">&times;</button>
+            <h3 id="modal-titulo"></h3>
+            <p id="modal-descricao"></p>
+            <div id="modal-tags" class="tags"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
